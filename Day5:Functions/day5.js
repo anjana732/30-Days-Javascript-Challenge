@@ -1,6 +1,7 @@
 //Activity 1: Function declaration
 /********************************* TASK 1 *********************************/
 
+console.log("Activity 1: Function declaration(TASK 1)")
 const num1 = 20;
 function checkEvenOdd(num) {
     if(num % 2 == 0){
@@ -13,6 +14,7 @@ checkEvenOdd(num1)
 
 /********************************* TASK 2 *********************************/
 
+console.log("Activity 1: Function declaration(TASK 2)")
 const num2 = 25
 
 function findSquareRoot(num){
@@ -24,6 +26,7 @@ findSquareRoot(num2);
 //Activity 2: Function Expression
 /********************************* TASK 3 *********************************/
 
+console.log("Activity 2: Function Expression (TASK 3)")
 const maximum = function(number1, number2, number3){
     if(number1 > number2){
         if(number1 > number3){
@@ -44,6 +47,7 @@ maximum(40,50,60);
 
 /********************************* TASK 4 *********************************/
 
+console.log("Activity 2: Function Expression (TASK 4)")
 let concatString =function(str1, str2){
     if(typeof(str1)!= "string"){
         str1 = String(str1);
@@ -59,6 +63,7 @@ console.log(concatString("Anjana", "Kumari"));
 //Activity 3: Arrow Function
 /********************************* TASK 5 *********************************/
 
+console.log("Activity 3: Arrow Function(TASk 5)")
 const sumOfNumber = (num1, num2)=>{
     return num1+num2;
 }
@@ -67,6 +72,7 @@ console.log(sumOfNumber(3,7));
 
 /********************************* TASK 6 *********************************/
 
+console.log("Activity 3: Arrow Function(TASK 6)")
 const str1 = "Raam is a good boy"
 const findValueInString = (str, value) => {
     return str.includes(value);
@@ -77,6 +83,7 @@ console.log(findValueInString(str1,"good"))
 //Activity 4: Function Parameters and default value
 /********************************* TASK 7 *********************************/
 
+console.log("Activity 4: Function Parameters and default value (TASK 7)")
 function product(num1 , num2 = 10){
     console.log(num1 *num2)
 }
@@ -85,6 +92,7 @@ product(2)
 
 /********************************* TASK 8 *********************************/
 
+console.log("Activity 4: Function Parameters and default value (TASK 8)")
 const personGreeting = (name, age = 20) =>{
     const greeting = "Good Morning"
     return greeting + " " + name + " "+ "your age is "+ age;
@@ -95,6 +103,7 @@ console.log(personGreeting("Anjana"));
 //Activity 5: Higher order function
 /********************************* TASK 9 *********************************/
 
+console.log("Activity 5: Higher order function (TASK 9)")
 const HigherOrderFunction = (fun1, itr)=>{
     let value = 0;
     for(let i= 1; i<=itr;i++){
@@ -107,6 +116,7 @@ console.log(HigherOrderFunction(sumOfNumber,5));
 
 /********************************* TASK 10 *********************************/
 
+console.log("Activity 5: Higher order function (TASK 10)")
 const func1 = ()=>{
     console.log("Function 1");
 }
