@@ -18,7 +18,7 @@ console.log("Activity 1: Function declaration(TASK 2)")
 const num2 = 25
 
 function findSquareRoot(num){
-    console.log(`Square root of ${num} is Math.sqrt(num)`);
+    console.log(`Square root of ${num} is ${Math.sqrt(num)}`);
 }
 
 findSquareRoot(num2);
