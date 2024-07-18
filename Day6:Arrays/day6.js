@@ -104,4 +104,5 @@ for(let i = 0;i<twoDArray.length;i++){
     console.log(value);
 }
 
-console.log(twoDArray[2][2]);
+
+console.log(`Accessing random element from 2D array ${twoDArray[2][2]}`);
