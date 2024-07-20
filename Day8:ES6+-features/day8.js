@@ -80,9 +80,10 @@ const person ={
     }
 }
 
-console.log("Dynamic property name using computed property")
 console.log(person)
 
+/********************************** TASK 9 *********************************/
+console.log("Dynamic property name using computed property")
 const computedProperty = "value";
 
 let obj = {
