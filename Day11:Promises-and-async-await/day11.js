@@ -143,7 +143,7 @@ fetchData();
 
 
 //Activity 4 : Concurrent promises
-/********************************** TASK 6 ***********************************/
+/********************************** TASK 8 ***********************************/
 
 const promise1 = ()=>{
     return new Promise((resolve, reject) =>{
@@ -177,8 +177,7 @@ Promise.all([promise1, promise2, promise3])
     console.log(err)
 })
 
-
-
+/********************************** TASK 9 ***********************************/
 
 const Promise1 = new Promise((resolve, reject) => {
     setTimeout(() => {
