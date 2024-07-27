@@ -71,7 +71,7 @@ const arrayres = OuterArrayFunc(5)
 arrayres.forEach(fn => fn());
 
 //Activity 4 : Modules
-/************************************ TASK 5 ************************************/
+/************************************ TASK 6 ************************************/
 
 function itemOuter(){
     const list = ["item1","item2","item3"];
@@ -101,4 +101,62 @@ list1.removeItem()
 list1.display()
 
 //Activity 5 : Memoization
-/************************************ TASK 6 ************************************/
+/************************************ TASK 7 ************************************/
+
+function memoizeOuterFunc(fn) {
+    
+    const prevCom = new Map();
+    function memoizeInnerFunc(...args) {
+        const jsonRes = JSON.stringify(args);
+        if (prevCom.has(jsonRes)) {
+            console.log('Previous computation:', args);
+            return prevCom.get(jsonRes);
+        }
+
+        console.log('Computing result for args:', args);
+        const result = fn(...args);
+        prevCom.set(jsonRes, result);
+
+        return result;
+    };
+    return memoizeInnerFunc
+}
+
+function add(a, b) {
+    return a + b;
+}
+
+
+const memoizedAdd = memoizeOuterFunc(add);
+
+console.log(memoizedAdd(2, 3)); 
+console.log(memoizedAdd(2, 3)); 
+console.log(memoizedAdd(5, 7)); 
+
+/************************************ TASK 8 ************************************/
+
+function memoize(fn) {
+    const cache = {};
+    return function(n) {
+       
+        console.log('Factorial of ', n);
+        const result = fn(n);
+        cache[n] = result;
+
+        return result;
+    };
+}
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+
+const memoizedFactorial = memoize(factorial);
+
+console.log(memoizedFactorial(5));
+
+
