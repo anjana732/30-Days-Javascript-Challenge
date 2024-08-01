@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-localstorage": "^3.0.5"
+    "node-localstorage": "^3.0.5",
+    "node-sessionstorage": "^1.0.0"
   }
 }

@@ -2,7 +2,6 @@
 /*********************************** TASK 1 ***********************************/
 import { LocalStorage } from 'node-localstorage';
 
-
 const localStorage = new LocalStorage('./scratch');
 
 localStorage.setItem('username', 'Anjana');
@@ -33,5 +32,6 @@ console.log(localStorage.getItem('user'))
 //Activity 3 : Understanding SessionStorage
 /*********************************** TASK 4 ***********************************/
 
-sessionStorage.setItem('name','anjana');
+
+sessionStorage.setItem('name','Anjana singh');
 console.log(sessionStorage.getItem('name'));
