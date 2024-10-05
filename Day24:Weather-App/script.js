@@ -5,13 +5,6 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 const url = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
 let inputBox = document.getElementById('city-input')
 let graphData = []
-// var graphData = [
-//     ["06/10/2024", 22.52],
-//     ["07/10/2024", 23.56],
-//     ["08/10/2024", 23.13],
-//     ["09/10/2024", 24.25],
-//     ["10/10/2024", 23.07]
-// ];
 async function forecast() {
     city = "Pune"
     try {
@@ -35,9 +28,7 @@ async function forecast() {
                 continue;
             }
             console.log(list[index]);
-            
-            //console.log("date",data.list[index].dt)
-            
+
             graphData.push([apiDate.toLocaleDateString(), temp])
             index = index + 7
 
@@ -49,30 +40,15 @@ async function forecast() {
 }
 forecast();
 function drawGraph() {
-    console.log("Drawing graph...");
-    console.log("Graph data:", graphData); // Log the data to check the structure
-
-    // Create the dataset using the provided graphData
     var dataSet = anychart.data.set(graphData);
-
-    // Create a line chart
     var chart = anychart.line();
-
-    // Correct axis titles
     chart.xAxis().title("Date");
-    chart.yAxis().title("Temperature (°C)");
+    chart.yAxis().title("Temperature");
 
-    // Map data: index 0 (x) is the date, index 1 (value) is the temperature
     var firstSeriesData = dataSet.mapAs({ x: 0, value: 1 });
-    var firstSeries = chart.line(firstSeriesData);
+    chart.line(firstSeriesData);
 
-    // Name the series
-    firstSeries.name("Weather Forecast");
-
-    // Enable chart legend
     chart.legend().enabled(true);
-
-    // Log any chart errors if they occur
     chart.listen("chartdraw", function() {
         console.log("Chart drawn");
     });
@@ -80,22 +56,14 @@ function drawGraph() {
     chart.listen("error", function(e) {
         console.log("Error drawing chart:", e);
     });
-
-    // Set the container where the chart should be rendered
     chart.container("container");
-
-    // Draw the chart
     chart.draw();
 }
 
-
 async function main() {
-    
     await forecast();
-
     drawGraph();
 }
-
 main();
 
 console.log("Chart Data: ",graphData);
