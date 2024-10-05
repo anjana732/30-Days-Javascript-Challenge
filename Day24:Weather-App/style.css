@@ -1,0 +1,116 @@
+body{
+    background-color: #424040;
+}
+p{
+    color: aliceblue;
+}/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #007BFF, #00D4FF);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#main-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+input#city-input {
+    padding: 10px 15px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    width: 250px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+input#city-input::placeholder {
+    color: #ddd;
+}
+
+button#fetch-data {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff8c00;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button#fetch-data:hover {
+    background-color: #ffa500;
+}
+
+#data {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+#data p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#temperature {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+#feels-like {
+    color: #ffca28;
+}
+
+#sunrise, #sunset {
+    color: #ff7043;
+}
+
+#wind-speed {
+    color: #29f667;
+}
+
+#description {
+    font-style: italic;
+    color: #80deea;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #main-container, #data {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    input#city-input {
+        width: 80%;
+    }
+}
